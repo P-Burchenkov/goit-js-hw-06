@@ -11,15 +11,14 @@ const refs = {
 };
 let counterValue = 0;
 
-refs.btnDecrementEl.addEventListener("click", decreaseCounter);
-refs.btnIncrementEl.addEventListener("click", increaseCounter);
+refs.btnDecrementEl.addEventListener("click", onBtnDecrementClick);
+refs.btnIncrementEl.addEventListener("click", onIncrementBtnClick);
 
-function decreaseCounter() {
+function onBtnDecrementClick() {
   counterValue -= 1;
   refs.valueEl.textContent = counterValue;
 }
-function increaseCounter() {
+function onIncrementBtnClick() {
   counterValue += 1;
   refs.valueEl.textContent = counterValue;
 }
-
