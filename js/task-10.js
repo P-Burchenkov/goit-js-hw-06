@@ -39,7 +39,8 @@ function createBoxes(amount) {
     box.style.height = `${boxWidth}px`;
     box.style.backgroundColor = getRandomHexColor();
     arrayBoxes.push(box);
-    console / console.log(arrayBoxes);
+    console.log(box.style);
   }
   boxesEl.append(...arrayBoxes);
 }
+
