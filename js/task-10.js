@@ -22,17 +22,24 @@ createButtonEl.addEventListener("click", onCreateButtonClick);
 destroyButtonEl.addEventListener("click", onDestroyButtonClick);
 
 function onCreateButtonClick(event) {
-
- }
-
-function onDestroyButtonClick(value) { }
-
-function createBoxes(amount) {
-  for (let i = 1; i < amount; i += 1) {
-      const box = document.createElement("div");
-      box.style.width = 30
-    boxesEl.append(box);
-  }
+  createBoxes(inputEl.value);
 }
 
-createBoxes(10);
+function onDestroyButtonClick(event) {
+  boxesEl.innerHTML = "";
+}
+
+function createBoxes(amount) {
+  let boxWidth = 20;
+  const arrayBoxes = [];
+  for (let i = 1; i <= amount; i += 1) {
+    const box = document.createElement("div");
+    boxWidth += 10;
+    box.style.width = `${boxWidth}px`;
+    box.style.height = `${boxWidth}px`;
+    box.style.backgroundColor = getRandomHexColor();
+    arrayBoxes.push(box);
+    console / console.log(arrayBoxes);
+  }
+  boxesEl.append(...arrayBoxes);
+}
