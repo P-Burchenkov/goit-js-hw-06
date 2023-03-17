@@ -6,7 +6,9 @@ const outputEl = document.getElementById("name-output");
 inputEl.addEventListener("input", onInput);
 
 function onInput(event) {
-  event.currentTarget.value === ""
+  const inputValue = event.currentTarget.value;
+
+  inputValue.trim() === ""
     ? (outputEl.textContent = "Anonymous")
-    : (outputEl.textContent = event.currentTarget.value);
+    : (outputEl.textContent = inputValue.trim());
 }
